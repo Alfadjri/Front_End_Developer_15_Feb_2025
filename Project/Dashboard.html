@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Public/css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- slidebar -->
+    <div class="slidebar">
+        <div class="header_slidebar">
+            <img src="./Public/img/icon.png" alt="icon_codingstudio">
+            <h2>Codingstudio</h2>
+        </div>
+        <ul>
+            <li class="aktive"><a href="#">Dashboard</a></li>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="./Login.html">tampilan login</a></li>
+        </ul>
+        <div class="logout">
+            <a href="#" id="logout">Keluar</a>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="main_content">
+        <header>
+            <h2>Dashboard</h2>
+            <div class="user_info">
+                <span>Alfadjri Dwi Fadhilah</span>
+                <small>Adminstrator</small>
+            </div>
+        </header>
+        <section class="content">
+            <div class="toolbar">
+                <input type="text" name="search" placeholder="Cari User">
+                <button class="import">Import Excel</button>
+                <button class="add">
+                    Add user
+                    <!-- <img src="./Public/img/add-user.png" alt="edit_page"> -->
+                </button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>No Telepon</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="No" >1</td>
+                        <td>Alfadjri Dwi Fadhilah</td>
+                        <td>alfadjri28</td>
+                        <td>alfadjri28@gmail.com</td>
+                        <td>0877888221213131</td>
+                        <td><span class="status aktif">Aktif</span></td>
+                        <td>
+                            <button class="edit">
+                                <img src="./Public/img/edit.png" alt="edit_page" width="40" height="40">
+                            </button>
+                            <button class="delete">
+                                <img src="./Public/img/bin.png" alt="edit_page" width="40" height="40">
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="No" >1</td>
+                        <td>Alfadjri Dwi Fadhilah</td>
+                        <td>alfadjri28</td>
+                        <td>alfadjri28@gmail.com</td>
+                        <td>0877888221213131</td>
+                        <td><span class="status inaktif">nonAktif</span></td>
+                        <td>
+                            <button class="edit">
+                                <img src="./Public/img/edit.png" alt="edit_page" width="40" height="40">
+                            </button>
+                            <button class="delete">
+                                <img src="./Public/img/bin.png" alt="edit_page" width="40" height="40">
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button>&lt;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>&gt;</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

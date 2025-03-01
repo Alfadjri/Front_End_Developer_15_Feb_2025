@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.slidebar {
+    width: 250px;
+    background: #2a3f54;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header_slidebar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* .slidebar -> ul */
+.slidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* slidebar -> ul ->li */
+.slidebar ul li {
+    padding: 15px;
+}
+
+/* slidebar -> ul ->li yang ada class aktive */
+.slidebar ul li.aktive {
+    background: #1d2939;
+    border-radius: 5px;
+}
+
+.slidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.slidebar .logout {
+    position: absolute;
+    bottom: 20px;
+    width: 75%;
+    text-align: center;
+}
+
+.slidebar .logout a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Main Content */
+.main_content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100%-250px);
+    transition: margin-left 0.3s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.toolbar input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.toolbar button {
+    padding: 8px 15px;
+    background: #2a3f54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background: #11c15d;
+}
+
+.toolbar button img {
+    width: 40px;
+    height: 40px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border:1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #2a3f54;
+    color:white;
+}
+
+.status{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+.status.aktif{
+    background: green;
+    color: white;
+}
+.status.inaktif{
+    background: red;
+    color: white;
+}
+
+.pagination button{
+    padding: 8px 12px;
+    margin: 0 5px;
+    background: #2a3f54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+@media (max-width:768px) {
+    .slidebar{
+        transform: translateX(-100%);
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .main_content{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .toolbar{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .toolbar input{
+        width: 100%;
+    }
+    .toolbar button{
+        width: 100%;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    thead{
+        display: none;
+    }
+    tbody,tr{
+        display: block;
+        width: 100%;
+    }
+    tr{
+        margin-bottom: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        background: white;
+    }
+
+    td{
+        display: block;
+        text-align: left;
+        padding: 8px;
+        border: none;
+        position: relative;
+    }
+    td[data-label="No"]{
+        display: none;
+    }
+}
