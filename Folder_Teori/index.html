@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat datang di website saya</title>
+    <!-- logika perhitungannya di awal  -->
+     <script src="./app.js"></script>
+    <script type="text/javascript">
+        console.log("Flow 1")
+    </script>
 </head>
 <body>
     <h1>Tag Judul</h1>
@@ -58,9 +63,9 @@
             </p>
             <p>
                 <label for="agama">Agama :</label>
-                <select name="" id="">
+                <select name="agama" id="select_agama">
                     <option value="" selected> Select your option </option>
-                    <option value="Islam" > <b>Islam</b></option>
+                    <option value="Islam" >Islam</option>
                     <option value="Kristen" > Kristen</option>
                     <option value="Hindu" > Hindu</option>
                     <option value="Buda" > Buda</option>
@@ -72,5 +77,8 @@
             </p>
         </fieldset>
     </form>
+    <script>
+        console.log("Close value ")
+    </script>
 </body>
 </html>
