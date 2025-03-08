@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Area</title>
+    <link rel="stylesheet" type="text/css" href="./Public/css/login.css">
+</head>
+<body id="content">
+    <section class="login_container">
+        <div class="login_box">
+            <div class="login_logo">
+                <img src="./Public/img/icon.png" alt="icon_codingstudio">
+                <h2>Codingstudio</h2>
+            </div>
+            <form action="#" method="POST" id="registerForm">
+                <h3>Register Panel</h3>
+                <p>Enter your identity</p>
+                <input type="text" id="name" placeholder="nama lengkap" required>
+                <input type="email" id="email" placeholder="example@gmail.com"  required/>
+                <input type="tel" id="telp" placeholder="085XXXXXXXXXX">
+                <input type="password" id="password" placeholder="password" required/>
+                <button type="submit">Register</button>
+                <a href="./Login.html">Login</a>
+            </form>
+            <!-- inline css -->
+            <p id="error_mesage" style="color: red; display: none;"></p>
+        </div>
+    </section>
+    <!-- modal -->
+    <div class="modal" id="modal" style="display: none;">
+        <div class="modal-container">
+            <span class="close" id="close-modal-icon">&times;</span>
+            <p id="modal-message"> Error Message here</p>
+            <button id="close-modal-btn">Tutup</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./Public/js/Register.js" ></script>
+</body>
+</html>

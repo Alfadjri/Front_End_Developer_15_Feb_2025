@@ -58,16 +58,26 @@
                 <img src="./Public/img/icon.png" alt="icon_codingstudio">
                 <h2>Codingstudio</h2>
             </div>
-            <form action="#" method="post" id="loginForm">
+            <form action="#" method="GET" id="loginForm">
                 <h3>Log In Admin Panel</h3>
                 <p>Enter your email and password below</p>
-                <input type="email" name="email" id="email" placeholder="example@gmail.com"  required/>
-                <input type="password" name="password" id="password" placeholder="password" required/>
+                <input type="email" id="email" placeholder="example@gmail.com"  required/>
+                <input type="password" id="password" placeholder="password" required/>
                 <button type="submit">Login</button>
+                <a href="./Register.html">Register Akun</a>
             </form>
             <!-- inline css -->
-            <p id="error_mesage" style="color: red; display: none;"> Email or Password salah !</p>
+            <p id="error_mesage" style="color: red; display: none;"></p>
         </div>
     </section>
+    <!-- modal -->
+    <div class="modal" id="modal" style="display: none;">
+        <div class="modal-container">
+            <span class="close" id="close-modal-icon">&times;</span>
+            <p id="modal-message"> Error Message here</p>
+            <button id="close-modal-btn">Tutup</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="./Public/js/Login.js"></script>
 </body>
 </html>

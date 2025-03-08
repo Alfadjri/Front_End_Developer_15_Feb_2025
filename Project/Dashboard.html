@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./Public/css/dashboard.css">
     <title>Dashboard</title>
+    <script type="text/javascript">
+        function checkToken(name){
+            let token = localStorage.getItem(name);
+            return token;
+        }
+        let token =  checkToken("id_token");
+        if(!token){
+            alert("Anda harus login terlebih dahulu sebelum bisa masuk ke sini error 302 ");
+            window.location.href = "./login.html";
+        }
+    </script>
 </head>
 <body>
     <!-- slidebar -->
@@ -97,5 +108,6 @@
             </div>
         </section>
     </div>
+    <script type="text/javascript" src="./Public/js/dashboard.js"></script>
 </body>
 </html>
