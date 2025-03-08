@@ -63,3 +63,77 @@ console.log("hasil sisa dari pembagian " + a + " % " + b + " = " + hasil);
 // pangkat
 hasil = a ** b;
 console.log("hasil pangkat dari  " + a + " ^ " + b + " = " + hasil);
+
+
+// algorima kondisi atau selection
+// misal saya punya nilai rapot
+// saya mau check nilai untuk code nya A > 90 B > 80 C > 70 D <= 70
+
+let nilai_raport = 20;
+console.log("=======if=======")
+if ( nilai_raport > 90) {
+    // isikan apa yang akan terjadi jika kondisi terpenuhi
+    console.log("nilai kamu  : A");
+}
+console.log("=======if else=======")
+if ( nilai_raport > 90) {
+    // isikan apa yang akan terjadi jika kondisi terpenuhi
+    console.log("nilai kamu  : A");
+}else {
+    console.log("nilai kamu  : D");
+}
+
+console.log("=======if elseif else=======");
+nilai_raport = 71;
+if ( nilai_raport > 90) {
+    // isikan apa yang akan terjadi jika kondisi terpenuhi
+    console.log("nilai kamu  : A");
+}else if (nilai_raport > 80 && nilai_raport <= 90){
+    console.log("nilai kamu  : B");
+}else if (nilai_raport > 70 && nilai_raport <= 80){
+    console.log("nilai kamu  : C");
+}else{
+    console.log("nilai kamu  : D");
+}
+
+
+// and && ini syaratnya kedua sisi harus terpenuhi
+// or || ini salah satu sisi harus terpenuhi
+// not ! ini kebalikan dari nilai apapun mirip (Antonim)
+// let kondisi = true;
+// console.log(kondisi);
+// kondisi = !kondisi;
+// console.log(kondisi);
+
+console.log("=========looping=========");
+
+//  perulangan atau looping
+// for
+// syaratnya kita tau kapan mulai kapan berhenti
+console.log("=========for=========");
+// tolong buatkan nomer dari 1 sampai 10
+// nilai++ ini di sebutnya increment
+// misal saya punya nilai 1000 di tampung di variabel a terus 
+// terus saya mau menambahkan nilai a dengan 1 
+// nilai = nilai + 1;
+// increment (menjumlahkan ) atau decerment (pengurangan)
+// nilai++  singakatan dari nilai = nilai + 1 
+// nilai--  singaktan dari nilai = nilai - 1
+for(let nilai = 1 ; nilai <= 1 ; nilai++){
+    console.log(nilai + " Tidak mengulangi kesalahan yang sama");
+}
+// while
+// chek dulu baru jalankan tapi kita gak tau kapan harus berhenti tapi tau syarat untuk berhenti
+console.log("=========while=========");
+let nilai = 10;
+while(nilai < 10){ // kita tau kapan harus berhenti
+    console.log(nilai + " Tidak mengulangi kesalahan yang sama");
+    nilai++; // kita tau cara dia berhenti
+}
+console.log("=========do while=========");
+do {
+    nilai++;
+    console.log(nilai + " Tidak mengulangi kesalahan yang sama");
+}while(nilai < 10);
+
+
