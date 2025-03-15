@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Public/src/js/jquery.js"></script>
+    <title>Animation Javascript</title>
+    <style>
+        #myDiv{
+            border: 1px solid black;
+            background-color: lightblue;
+            width: 270px;
+            height: 200px;
+            overflow: auto;
+        }
+        #myDiv:hover{
+            background-color: coral;
+            width: 570px;
+            height: 500px;
+            padding: 100px;
+            border-radius: 50px;
+        }
+        #train{
+            position: relative;
+            cursor: pointer;
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Transisi Animation</h1>
+    <p>Mouse over Div element akan merubah warna dan ukuran</p>
+    <button onclick="hoverClick()">Click this button</button>
+    <div class="" id="myDiv">
+        <h1>MyDiv</h1>
+    </div>
+
+    <script>
+        function hoverClick(){
+            document.getElementById("myDiv").style.transition = "all";
+        }
+    </script>
+
+    <hr>
+    <h1>Animation</h1>
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3E4ODNsYzY4ZTFrYnN6eHZwejJqNmxwdWtkY3J6MWM5eHQ5MHExNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cHj0XeQ99zW9cMOnQm/giphy.gif" alt="train" class="" id="train">
+
+    <script>
+        // Jquery memudahkan dalam memanggil function
+        // javascript
+        // document.getElementById('train').onclick = function(){
+        //     let start = 0;
+        //     let timer = setInterval(function() {
+        //         let timePress = Date.now() + start;
+        //         train.style.left = "200px";
+        //         if (timePress > 2000) clearInterval(timer);
+        //     },20)
+        // }
+        // jquery 
+        // $('panggil class atau id nya atau attribut').Apayangmaudi
+        $('#train').on('click',function() {
+            var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            let start = Date.now();
+            let timer = setInterval(function (){
+                let timePress = Date.now() - start;
+                train.style.left = timePress + 'px';
+                if (timePress > 1920) {
+                    clearInterval(timePress);
+                }
+            },20);
+        });
+       
+    </script>
+</body>
+</html>
